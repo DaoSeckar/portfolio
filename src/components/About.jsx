@@ -39,7 +39,7 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  @media only screen and (max-width: 768 px) {
+  @media only screen and (max-width: 768px) {
     align-items: center;
     text-align: center;
   }
@@ -77,19 +77,23 @@ const Button = styled.button`
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Left>
+        <Canvas>
+          <Cube />
+        </Canvas>
         </Left>
         <Right>
           <Title>This website was created with Vite, React, CSS, JS, and Three.js</Title>
           <WhatIDo>
             <Line src="./img/line.png" />
-            <Subtitle>Spinning hello cube to catch your attention</Subtitle>
+            <Subtitle>Spinning hello cube to catch your attention(Not Mobile Compatible)</Subtitle>
           </WhatIDo>
           <Desc>
             Thank you for visitting my portoflio!
           </Desc>
+       
           <Button>See my works</Button>
         </Right>
       </Container>

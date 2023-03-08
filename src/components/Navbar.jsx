@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from "styled-components"
 
 const Section = styled.div`
@@ -91,6 +91,7 @@ const Icon = styled.img`
 `;
 
 const Navbar = () => {
+  const [activeNav, setActiveNav] = useState('#hero')
   return (
     <Section>
       <Container>

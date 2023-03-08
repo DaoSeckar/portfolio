@@ -79,7 +79,7 @@ const Button = styled.button`
   background-color: #2A1D36;
   color: white;
   font-weight: 500;
-  width: 100px;
+  width: 200px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -123,8 +123,8 @@ const Img = styled.img`
 `;
 const Hero = () => {
     return (
-        <Section>
-            <Navbar/>
+        <Section id="hero">
+            <Navbar />
             <Container>
                 <Left>
                     <Title>Hello I'm Dao!</Title>
@@ -133,7 +133,7 @@ const Hero = () => {
                         <Subtitle>This is my portfolio</Subtitle>
                     </WhatIDo>
                     <Desc>I enjoy creating fun softwares and websites</Desc>
-                    <Button>Learn more</Button>
+                    <Button download="./img/ResumeFinal.pdf" href="./img/ResumeFinal.pdf">Download My Resume Here!</Button>
                 </Left>
                 <Right> 
                     <Img src="./img/animation.gif" />

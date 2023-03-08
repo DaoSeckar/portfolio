@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components"
+import Map from "./Map";
 
 const Section = styled.div`
   height: 100vh;
@@ -96,7 +97,7 @@ const Contact = () => {
       );
   };
   return (
-    <Section>
+    <Section id="contact">
       <Container>
         <Left>
         <Form ref={ref} onSubmit={handleSubmit}>
@@ -114,6 +115,7 @@ const Contact = () => {
           </Form>
         </Left>
         <Right>
+          <Map />
         </Right>
       </Container>
     </Section>
