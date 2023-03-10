@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import Navbar from './Navbar';
+import { saveAs } from 'file-saver';
+
 
 const Section = styled.div`
   height: 100vh;
@@ -122,18 +123,26 @@ const Img = styled.img`
     }
 `;
 const Hero = () => {
+
+  const downloadFile = () => {
+    const pdfUrl = '/img/ResumeFinal.pdf';
+    const pdfName = 'ResumeFinal.pdf';
+    saveAs(pdfUrl, pdfName);
+}
+
     return (
         <Section id="hero">
-            <Navbar />
+            {/* <Navbar /> */}
             <Container>
                 <Left>
                     <Title>Hello I'm Dao!</Title>
                     <WhatIDo>
                         <Line src="./img/line.png"></Line>
+                        
                         <Subtitle>This is my portfolio</Subtitle>
                     </WhatIDo>
                     <Desc>I enjoy creating fun softwares and websites</Desc>
-                    <Button download="./img/ResumeFinal.pdf" href="./img/ResumeFinal.pdf">Download My Resume Here!</Button>
+                    <Button onClick={downloadFile}>Download My Resume Here!</Button>
                 </Left>
                 <Right> 
                     <Img src="./img/animation.gif" />
